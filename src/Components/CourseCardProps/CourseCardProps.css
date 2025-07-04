@@ -1,0 +1,123 @@
+/*
+  Course Card CSS - Beginner Friendly Documentation
+  -----------------------------------------------
+  This file styles the course card component. Each section is explained for beginners.
+*/
+
+/* Main container for each course card */
+.course-card {
+  background: var(--card-bg, #fff); /* Use CSS variable for background, fallback to white */
+  color: var(--card-color, #232323); /* Use CSS variable for text color, fallback to dark */
+  padding: 24px 20px 20px 20px; /* Space inside the card */
+  width: 340px;     /* Card width */
+  border-radius: 16px; /* Rounded corners */
+  font-family: 'Segoe UI', sans-serif; /* Modern font */
+  flex-shrink: 0;   /* Prevent shrinking if many cards */
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10), 0 1.5px 4px rgba(44, 62, 80, 0.08); /* Soft shadow */
+  display: flex;    /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: flex-start; /* Align content to the left */
+  transition: box-shadow 0.2s, transform 0.2s; /* Smooth hover effect */
+}
+
+/* Card hover effect: shadow and slight lift */
+.course-card:hover {
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18), 0 3px 8px rgba(44, 62, 80, 0.12);
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Container for multiple cards (for layout) */
+.card-container {
+  display: flex;            /* Arrange cards in a row */
+  margin-top: 100px;        /* Space from top of page */
+  justify-content: center;  /* Center cards horizontally */
+  gap: 20px;                /* Space between cards */
+  flex-wrap: wrap;          /* Move cards to next line if needed */
+}
+
+/* Image at the top of the card */
+.course-image {
+  width: 100%;              /* Image fills card width */
+  height: 180px;            /* Fixed height */
+  object-fit: cover;        /* Crop image to fit nicely */
+  border-radius: 12px;      /* Rounded image corners */
+  margin-bottom: 14px;      /* Space below image */
+}
+
+/* Tag or badge (e.g., course type) */
+.badge {
+  background-color: #fc5c65; /* Swiftrinity Red */
+  color: #fff;               /* White text */
+  padding: 5px 16px;         /* Space inside badge */
+  border-radius: 999px;      /* Pill shape */
+  font-size: 13px;           /* Small text */
+  font-weight: 600;          /* Bold text */
+  letter-spacing: 0.5px;     /* Space between letters */
+  margin-bottom: 10px;       /* Space below badge */
+  margin-top: 0;
+  box-shadow: 0 1px 4px rgba(252, 92, 101, 0.10); /* Soft shadow */
+}
+
+/* Course title */
+h3 {
+  font-size: 1.25rem;        /* Medium-large text */
+  font-weight: 700;          /* Bold */
+  margin: 10px 0 6px 0;      /* Space around title */
+  color: #232323;            /* Dark text */
+}
+
+/* Course description */
+p {
+  margin: 0 0 8px 0;         /* Space below each paragraph */
+  font-size: 1rem;           /* Normal text size */
+  color: #444;               /* Slightly lighter text */
+}
+
+/* Price section (new and old price) */
+.price-section {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+/* Current price (highlighted) */
+.new-price {
+  color: #fc5c65;            /* Swiftrinity Red */
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* Old price (crossed out) */
+.old-price {
+  text-decoration: line-through; /* Line through old price */
+  color: #bbb;                   /* Greyed out */
+  margin-left: 12px;             /* Space from new price */
+  font-size: 16px;
+}
+
+/* Button at the bottom of the card */
+.view-button {
+  background-color: #fc5c65;     /* Swiftrinity Red */
+  color: #fff;                   /* White text */
+  border: none;                  /* No border */
+  padding: 12px 22px;            /* Space inside button */
+  border-radius: 8px;            /* Rounded corners */
+  margin-top: 16px;              /* Space above button */
+  font-size: 1rem;               /* Normal text size */
+  font-weight: 600;              /* Bold text */
+  letter-spacing: 0.5px;         /* Space between letters */
+  cursor: pointer;               /* Pointer on hover */
+  box-shadow: 0 2px 8px rgba(252, 92, 101, 0.10); /* Soft shadow */
+  transition: background 0.2s, box-shadow 0.2s;    /* Smooth hover */
+}
+
+/* Button hover effect */
+.view-button:hover {
+  background: #d9434e;           /* Darker red on hover */
+  box-shadow: 0 4px 16px rgba(252, 92, 101, 0.18);
+}
+
+/* Dark mode support for card */
+.app.dark .course-card {
+  --card-bg: #232323; /* Dark background for card in dark mode */
+  --card-color: #f8f8f8; /* Light text for card in dark mode */
+}

@@ -1,0 +1,18 @@
+/* Debug: Add a visible border and fallback color to verify selector is working */
+.sb-show-main {
+  /* Fallback background color */
+  background-color: #fff;
+  background-image: url('/SwiftrinityLogoDark.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: min(60vw, 320px) auto;
+  min-height: 100vh;
+}
+
+@media (max-width: 600px) {
+  .sb-show-main {
+    background-size: min(90vw, 180px) auto;
+  }
+}
+
+/* If you see the border but not the image, check the image path and try opening http://localhost:6006/SwiftrinityLogoDark.png in your browser. */

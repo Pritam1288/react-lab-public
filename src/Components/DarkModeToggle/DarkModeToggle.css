@@ -1,0 +1,54 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles */
+.app {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode */
+.app.light {
+  background-color: #F8F8F8;  /* Swiftrinity Light Grey */
+  color: #1F232C;             /* Swiftrinity Dark Grey */
+}
+
+/* Dark Mode */
+.app.dark {
+  background-color: #1F232C;  /* Swiftrinity Dark Grey */
+  color: #F8F8F8;             /* Light text on dark */
+}
+
+.toggle-button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #FC5C65;  /* Swiftrinity Red */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-button:hover {
+  background-color: #d9434e; /* Darker Swiftrinity Red for hover */
+}
+
+.toggle-icon {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  fill: currentColor;
+  transition: fill 0.2s;
+}

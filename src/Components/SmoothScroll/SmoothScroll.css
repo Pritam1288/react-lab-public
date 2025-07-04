@@ -1,0 +1,65 @@
+/*
+  SmoothScroll.css
+  This CSS file styles the SmoothScroll React component.
+  It uses modern CSS techniques to create a clean, dark-themed, and responsive layout.
+  Comments are added to help you learn how each part works!
+*/
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1F232C; /* Swiftrinity Dark Grey for the whole page */
+  color: #F8F8F8;             /* Light text for contrast */
+}
+
+.app {
+  text-align: center; /* Center all content in the app */
+}
+
+.header {
+  background-color: #1f1f1f; /* Slightly lighter dark for header */
+  padding: 2rem;             /* Space inside header */
+  border-bottom: 1px solid #333; /* Subtle line below header */
+}
+
+.btn-scroll {
+  padding: 1rem 2rem;           /* Large clickable button */
+  background-color: #FC5C65;    /* Swiftrinity Red for attention */
+  border: none;                 /* No border */
+  border-radius: 5px;           /* Rounded corners */
+  color: #fff;                  /* White text */
+  font-size: 1rem;              /* Readable text */
+  cursor: pointer;              /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.btn-scroll:hover {
+  background-color: #d94b56;    /* Slightly darker red on hover */
+  transform: scale(1.05);       /* Button grows a bit on hover */
+}
+
+.spacer {
+  height: 100vh;                /* Takes up full viewport height to create space */
+  display: flex;                /* Flexbox to center content */
+  justify-content: center;      /* Center horizontally */
+  align-items: center;          /* Center vertically */
+}
+
+.contact-section {
+  background-color: #181818;     /* Even darker background for contact section */
+  padding: 4rem;                 /* Lots of space inside */
+  border-top: 1px solid #333;    /* Subtle line above section */
+}
+
+.contact-section h2 {
+  font-size: 2rem;               /* Big heading */
+  color: #FC5C65;                /* Swiftrinity Red for heading */
+}
+
+/*
+  RESPONSIVENESS HIGHLIGHT:
+  - The .spacer uses 100vh (viewport height) to ensure there's enough space to scroll.
+  - Flexbox is used in .spacer to center the text, so it looks good on all screen sizes.
+  - Button and section paddings use rem units, which scale with the user's font size for accessibility.
+  - The color scheme and spacing make the component visually appealing and easy to use on both desktop and mobile devices.
+*/

@@ -1,0 +1,44 @@
+.counter-container {
+  background-color: #1F232C; /* Swiftrinity dark grey */
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  margin: 100px auto;
+  font-family: 'Ubuntu', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+button {
+  background-color: #FC5C65; /* Swiftrinity red */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #e14b56;
+}
+
+.counter-logo {
+  display: block;
+  margin: 0 auto 18px auto;
+  width: 180px;
+  height: auto;
+}

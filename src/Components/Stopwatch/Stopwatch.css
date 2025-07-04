@@ -1,0 +1,82 @@
+/* ========== Stopwatch Container ========== */
+.stopwatch-container {
+  background-color: #1F232C;       /* Swiftrinity dark theme background */
+  color: white;                    /* Makes all text white */
+  padding: 40px;                   /* Adds space inside the container */
+  border-radius: 20px;             /* Soft rounded corners */
+  width: 300px;                    /* Fixed width */
+  margin: 100px auto;              /* Centers the box horizontally on screen */
+  text-align: center;              /* Aligns text and children to the center */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adds depth with soft shadow */
+}
+
+/* ========== Digital Clock Display ========== */
+.digital-display {
+  font-size: 40px;                 /* Large font to look like a digital timer */
+  font-family: 'Courier New', monospace; /* Classic digital font style */
+  background-color: #000;         /* Black background like a digital screen */
+  padding: 20px;                  /* Space inside the display */
+  border-radius: 10px;            /* Rounded edges */
+  margin-bottom: 20px;            /* Space below the timer */
+  display: inline-block;          /* Shrinks the display to content width */
+}
+
+/* ========== Button Group ========== */
+.button-group {
+  display: flex;                  /* Arrange buttons in a horizontal line */
+  justify-content: center;       /* Center the buttons */
+  gap: 10px;                      /* Space between each button */
+}
+
+/* ========== Common Button Styles ========== */
+.start-btn,
+.stop-btn,
+.reset-btn {
+  padding: 10px 16px;             /* Space inside the button */
+  border: none;                   /* No border lines */
+  border-radius: 8px;             /* Rounded button corners */
+  color: white;                   /* White text for better visibility */
+  cursor: pointer;                /* Show pointer on hover */
+  font-weight: bold;             /* Make button text bold */
+}
+
+/* ========== Individual Button Colors ========== */
+.start-btn {
+  background-color: #28a745;     /* Green: Start */
+}
+
+.stop-btn {
+  background-color: #dc3545;     /* Red: Stop */
+}
+
+.reset-btn {
+  background-color: #ffc107;     /* Yellow: Reset */
+  color: #000;                   /* Black text for contrast */
+}
+
+/* ========== Responsive Styles ========== */
+@media (max-width: 500px) {
+  .stopwatch-container {
+    width: 95vw;
+    min-width: 0;
+    padding: 18px 4vw;
+    margin: 40px auto;
+    border-radius: 14px;
+  }
+  .digital-display {
+    font-size: 28px;
+    padding: 12px 4vw;
+    border-radius: 8px;
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .start-btn,
+  .stop-btn,
+  .reset-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+}

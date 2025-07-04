@@ -1,0 +1,122 @@
+/* Base Reset */
+* {
+  box-sizing: border-box; /* Ensures padding and border are included in width/height */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif; /* Sets a clean, modern font */
+  background-color: #1F232C; /* Swiftrinity dark background */
+  color: #ffffff; /* Makes text white for dark theme */
+}
+
+/* Responsive Container: Centers content and adds padding */
+.swiftrinity-container {
+  width: 100%; /* Full width on all screens */
+  padding: 2rem 1rem; /* Space around content */
+}
+
+
+/* Heading: Large, colored, and centered */
+.swiftrinity-heading {
+  font-size: 2rem; /* Big text for title */
+  color: #FC5C65; /* Highlight color */
+  margin-bottom: 1.5rem; /* Space below heading */
+  text-align: center; /* Centered text */
+}
+
+/* Responsive Search Form: Flexbox for layout, wraps on small screens */
+.search-form {
+  display: flex; /* Lays out children in a row */
+  flex-wrap: wrap; /* Allows items to wrap to next line on small screens */
+  gap: 0.5rem; /* Space between items */
+  justify-content: center; /* Center items horizontally */
+  margin-bottom: 2rem; /* Space below form */
+}
+
+.search-form input {
+  flex: 1 1 280px; /* Grows/shrinks, base width 280px */
+  min-width: 200px; /* Never gets smaller than 200px */
+  padding: 0.7rem 1rem; /* Space inside input */
+  font-size: 1rem; /* Readable text */
+  border-radius: 8px; /* Rounded corners */
+  border: none; /* No border */
+  background-color: #2C313C; /* Dark input background */
+  color: #fff; /* White text */
+}
+
+.search-form input::placeholder {
+  color: #aaa; /* Lighter placeholder text */
+}
+
+.search-form button {
+  padding: 0.7rem 1.5rem; /* Space inside button */
+  background-color: #FC5C65; /* Highlight color */
+  color: #fff; /* White text */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background 0.3s ease; /* Smooth color change on hover */
+}
+
+.search-form button:hover {
+  background-color: #e64c56; /* Slightly darker on hover */
+}
+
+/* Responsive Card Grid: Uses CSS grid to auto-fit cards */
+.card-list {
+  display: grid; /* Grid layout for cards */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Responsive: as many columns as fit, min 260px each */
+  gap: 1.5rem; /* Space between cards */
+}
+
+/* Card Design: Each book is a card with dark background and shadow */
+.book-card {
+  background-color: #2C313C; /* Card background */
+  border: 1px solid #444; /* Subtle border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 1.2rem; /* Space inside card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.book-card:hover {
+  transform: translateY(-4px); /* Lift card on hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+.book-title {
+  color: #FC5C65; /* Highlight color for title */
+  font-size: 1.2rem; /* Larger text */
+  margin-bottom: 0.5rem; /* Space below title */
+  word-wrap: break-word; /* Prevents long titles from overflowing */
+}
+
+/* Error Message Styling */
+.error-text {
+  color: #ff4d4d; /* Red for errors */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Centered */
+  margin-top: 1rem; /* Space above error */
+}
+
+/* Responsive Typography and Layout for Small Screens */
+@media (max-width: 480px) {
+  .swiftrinity-heading {
+    font-size: 1.5rem; /* Smaller heading on small screens */
+  }
+
+  .search-form button {
+    width: 100%; /* Button takes full width on small screens */
+  }
+}
+
+/*
+  RESPONSIVENESS HIGHLIGHT:
+  - The .card-list uses CSS grid with auto-fit and minmax, so the number of columns automatically adjusts to the screen size.
+  - .search-form uses flex-wrap, so the input and button stack vertically on small screens.
+  - The @media query at the bottom makes text and buttons smaller and more usable on phones.
+  - This ensures the component looks good and is usable on both desktop and mobile devices!
+*/

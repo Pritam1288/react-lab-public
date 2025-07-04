@@ -1,0 +1,35 @@
+/*
+  SubscribeButton.css
+  This CSS file styles the SubscribeButton React component.
+  Comments are added to help you learn how each part works!
+*/
+
+.subscribe-button {
+  padding: 1rem 2rem; /* Makes the button large and easy to click */
+  font-size: 1.2rem;  /* Bigger text for better readability */
+  border: none;       /* Removes default border */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  cursor: pointer;    /* Shows pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth color and size change on hover */
+  color: #fff;        /* Default text color is white */
+}
+
+/* 🔘 Not Subscribed — Light Grey */
+.subscribe-button.unsubscribed {
+  background-color: #F8F8F8; /* Light background for unsubscribed */
+  color: #1F232C;            /* Dark text for contrast */
+}
+
+.subscribe-button.unsubscribed:hover {
+  background-color: #dddddd; /* Slightly darker on hover for feedback */
+}
+
+/* ✅ Subscribed — Swiftrinity Red */
+.subscribe-button.subscribed {
+  background-color: #FC5C65; /* Red background for subscribed */
+  color: #fff;               /* White text for contrast */
+}
+
+.subscribe-button.subscribed:hover {
+  background-color: #d94b56; /* Darker red on hover for feedback */
+}
