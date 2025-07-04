@@ -111,8 +111,7 @@ function BookList() {
         ))}
       </div>
 
-      {/* Include the BookListSimple component to display the list of books */}
-      <BookListSimple books={books.map(book => book.title)} />
+      
     </div>
   );
 }
